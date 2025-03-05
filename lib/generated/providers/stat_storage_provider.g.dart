@@ -1,25 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../../providers/storage_provider.dart';
+part of '../../providers/stat_storage_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storageHash() => r'be46d13b098b76c65de71d40601c733fbcc59e1c';
+String _$statStorageHash() => r'f15a1ff8858f041ecad6f7ed59bd2b55b9c6e235';
 
-/// See also [Storage].
-@ProviderFor(Storage)
-final storageProvider =
-    AutoDisposeAsyncNotifierProvider<Storage, void>.internal(
-  Storage.new,
-  name: r'storageProvider',
+/// See also [StatStorage].
+@ProviderFor(StatStorage)
+final statStorageProvider =
+    AutoDisposeAsyncNotifierProvider<StatStorage, StatStorageView>.internal(
+  StatStorage.new,
+  name: r'statStorageProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$storageHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$statStorageHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$Storage = AutoDisposeAsyncNotifier<void>;
+typedef _$StatStorage = AutoDisposeAsyncNotifier<StatStorageView>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

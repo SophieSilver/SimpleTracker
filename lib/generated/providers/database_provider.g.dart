@@ -6,9 +6,16 @@ part of '../../providers/database_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$databaseHash() => r'6adce613ff18effd209a07e74333d2fa2df59e5f';
+String _$databaseHash() => r'2002390d7f0b9e5627158d9a0ec2c04149395ac9';
 
-/// See also [database].
+/// Provides direct level access to the database service.
+///
+/// Note that the database service does not have a mechanism
+/// for listening to updates.
+/// Consider wrapping this provider in another object,
+/// if you need to subscribe to updates in the stored data
+///
+/// Copied from [database].
 @ProviderFor(database)
 final databaseProvider = FutureProvider<DatabaseService>.internal(
   database,

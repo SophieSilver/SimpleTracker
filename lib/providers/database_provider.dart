@@ -9,13 +9,24 @@ part '../generated/providers/database_provider.g.dart';
 
 const dbName = "soSimpleCounter.db";
 
+/// Provides direct level access to the database service.
+/// 
+/// Note that the database service does not have a mechanism
+/// for listening to updates. 
+/// Consider wrapping this provider in another object,
+/// if you need to subscribe to updates in the stored data
 @Riverpod(keepAlive: true)
 Future<DatabaseService> database(Ref ref) async {
-  final dbDirectory = await path_provider
-      .getApplicationSupportDirectory();
+  final dbDirectory = await path_provider.getApplicationSupportDirectory();
   final fullDbPath = p.join(dbDirectory.path, dbName);
 
   final db = await DatabaseService.init(dbPath: fullDbPath);
-  log.i("Opened database at $fullDbPath"); 
+  log.i("Opened database at $fullDbPath");
+
+  ref.onDispose(() {
+    log.i("Closed database at $fullDbPath");
+    db.close();
+  });
+
   return db;
 }

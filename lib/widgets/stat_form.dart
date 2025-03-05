@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:so_simple_tracker/model/stat.dart';
-import 'package:so_simple_tracker/providers/storage_provider.dart';
+import 'package:so_simple_tracker/providers/stat_storage_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:so_simple_tracker/widgets/stat_form/numeric_value_input.dart';
 import 'package:so_simple_tracker/widgets/stat_form/stat_date_input.dart';
@@ -52,7 +52,7 @@ Widget __formSubmitButton(
         }
         form.save();
 
-        ref.read(storageProvider.notifier).insertStat(record.value);
+        ref.read(statStorageProvider.notifier).insertStat(record.value);
 
         if (context.mounted) {
           form.reset();

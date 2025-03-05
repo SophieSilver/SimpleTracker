@@ -60,9 +60,34 @@ class DatabaseService {
     await _db.rawInsert(
       """
         INSERT INTO Stats (timestamp, numeric_value)
-        VALUES (?, ?);
+          VALUES (?, ?);
       """,
       [stat.timestamp, stat.numericValue],
     );
+  }
+
+  Future<List<StatEntry>> queryStats() async {
+    final entries = await _db.rawQuery(
+      """
+        SELECT id, timestamp, numeric_value
+          FROM Stats;
+      """,
+    );
+
+    return entries
+        .map(
+          (entry) => StatEntry(
+            id: entry["id"] as int,
+            stat: StatRecord.withTimestamp(
+              timestamp: entry["timestamp"] as int,
+              numericValue: entry["numeric_value"] as double,
+            ),
+          ),
+        )
+        .toList();
+  }
+
+  Future<void> close() {
+    return _db.close();
   }
 }

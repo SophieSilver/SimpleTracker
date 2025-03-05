@@ -1,0 +1,2 @@
+/home/soph/SoftwareDev/so_simple_tracker/android/app/.cxx/Debug/1p3d3k6a/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/soph/SoftwareDev/so_simple_tracker/android/app/.cxx/Debug/1p3d3k6a/armeabi-v7a/CMakeFiles/rebuild_cache.dir
