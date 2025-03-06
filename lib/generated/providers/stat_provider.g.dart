@@ -8,7 +8,9 @@ part of '../../providers/stat_provider.dart';
 
 String _$statEntriesHash() => r'07bfed0a7144edc8bbcfdb0c1e4d32a5550b6e78';
 
-/// See also [statEntries].
+/// Get stored stat entries
+///
+/// Copied from [statEntries].
 @ProviderFor(statEntries)
 final statEntriesProvider = AutoDisposeFutureProvider<List<StatEntry>>.internal(
   statEntries,

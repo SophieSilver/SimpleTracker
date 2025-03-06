@@ -20,6 +20,9 @@ class StatStorageView {
   }
 }
 
+/// A provider for StatStorage,
+/// 
+/// Returns an object that can be used to query the stats
 @riverpod
 class StatStorage extends _$StatStorage {
   @override

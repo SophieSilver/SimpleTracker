@@ -8,7 +8,11 @@ part of '../../providers/stat_storage_provider.dart';
 
 String _$statStorageHash() => r'f15a1ff8858f041ecad6f7ed59bd2b55b9c6e235';
 
-/// See also [StatStorage].
+/// A provider for StatStorage,
+///
+/// Returns an object that can be used to query the stats
+///
+/// Copied from [StatStorage].
 @ProviderFor(StatStorage)
 final statStorageProvider =
     AutoDisposeAsyncNotifierProvider<StatStorage, StatStorageView>.internal(

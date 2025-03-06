@@ -5,6 +5,7 @@ import 'package:so_simple_tracker/providers/stat_storage_provider.dart';
 
 part '../generated/providers/stat_provider.g.dart';
 
+/// Get stored stat entries
 @riverpod
 Future<List<StatEntry>> statEntries(Ref ref) async {
   final storage = await ref.watch(statStorageProvider.future);
