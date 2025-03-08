@@ -126,22 +126,16 @@ Widget _statListHeader(BuildContext context) {
             ),
           ),
         ),
-        Expanded(
+        const Expanded(
           flex: 3,
           child: Padding(
-            padding: const EdgeInsets.symmetric(
+            padding: EdgeInsets.symmetric(
               vertical: 12.0,
               horizontal: 10.0,
             ),
-            child: Row(
-              children: [
-                Icon(Icons.numbers, color: theme.textTheme.bodyMedium?.color),
-                const SizedBox(width: 5.0),
-                const Text(
-                  "Value",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
+            child: Text(
+              "Value",
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
         ),
