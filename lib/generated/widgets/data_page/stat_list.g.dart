@@ -6,7 +6,7 @@ part of '../../../widgets/data_page/stat_list.dart';
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class StatListItem extends HookWidget {
+class StatListItem extends StatelessWidget {
   const StatListItem(
     this.entry, {
     Key? key,
@@ -21,7 +21,7 @@ class StatListItem extends HookWidget {
       );
 }
 
-class StatListView extends HookConsumerWidget {
+class StatListView extends ConsumerWidget {
   const StatListView({Key? key}) : super(key: key);
 
   @override
@@ -35,14 +35,14 @@ class StatListView extends HookConsumerWidget {
       );
 }
 
-class StatListHeader extends HookWidget {
+class StatListHeader extends StatelessWidget {
   const StatListHeader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext _context) => _statListHeader(_context);
 }
 
-class StatList extends HookWidget {
+class StatList extends StatelessWidget {
   const StatList({Key? key}) : super(key: key);
 
   @override

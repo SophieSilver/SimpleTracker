@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:so_simple_tracker/model/stat.dart';
@@ -11,7 +10,7 @@ part '../../generated/widgets/data_page/stat_list.g.dart';
 
 // TODO: deletion
 
-@hwidget
+@swidget
 Widget _statListItem(BuildContext context, StatEntry entry) {
   final colorScheme = Theme.of(context).colorScheme;
 
@@ -66,7 +65,7 @@ Widget _statListItem(BuildContext context, StatEntry entry) {
   );
 }
 
-@hcwidget
+@cwidget
 Widget _statListView(BuildContext context, WidgetRef ref) {
   final entries = ref.watch(statEntriesProvider);
   entries.rethrowError();
@@ -82,7 +81,7 @@ Widget _statListView(BuildContext context, WidgetRef ref) {
   };
 }
 
-@hwidget
+@swidget
 Widget _statListHeader(BuildContext context) {
   final theme = Theme.of(context);
   final colorScheme = theme.colorScheme;
@@ -151,7 +150,7 @@ Widget _statListHeader(BuildContext context) {
   );
 }
 
-@hwidget
+@swidget
 Widget _statList(BuildContext context) {
   final colorScheme = Theme.of(context).colorScheme;
 
