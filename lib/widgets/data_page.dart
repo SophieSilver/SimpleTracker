@@ -7,11 +7,15 @@ part '../generated/widgets/data_page.g.dart';
 
 @hwidget
 Widget _dataPage(BuildContext context) {
-  return const Column(
-    children: [
-      Expanded(
-        child: StatList(),
-      ),
-    ],
+  return Container(
+    constraints: const BoxConstraints(maxWidth: 400.0),
+    margin: const EdgeInsets.all(20.0),
+    child: const Column(
+      children: [
+        Expanded(
+          child: StatList(),
+        ),
+      ],
+    ),
   );
 }
