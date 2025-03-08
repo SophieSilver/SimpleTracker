@@ -41,3 +41,10 @@ class StatListHeader extends HookWidget {
   @override
   Widget build(BuildContext _context) => _statListHeader(_context);
 }
+
+class StatList extends HookWidget {
+  const StatList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _statList(_context);
+}
