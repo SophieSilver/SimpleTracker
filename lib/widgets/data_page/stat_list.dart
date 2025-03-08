@@ -164,6 +164,7 @@ Widget _statList(BuildContext context) {
         borderRadius: BorderRadius.circular(20.0),
       ),
       borderOnForeground: true,
+      color: colorScheme.surfaceContainerLowest,
       clipBehavior: Clip.antiAlias,
       child: const Column(
         children: [
