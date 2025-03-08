@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:so_simple_tracker/widgets/data_page.dart';
 import 'package:so_simple_tracker/widgets/track_page.dart';
 
 part '../generated/widgets/home.freezed.dart';
@@ -28,7 +29,7 @@ const pages = [
     activeIcon: Icons.insert_chart,
     inactiveIcon: Icons.insert_chart_outlined,
     title: "Data",
-    child: Text("Meow"),
+    child: DataPage(),
   ),
 ];
 
@@ -44,17 +45,18 @@ Widget _home(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
       title: AnimatedSwitcher(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         layoutBuilder: _layoutBuilder,
         transitionBuilder: _transitionBuilder,
         child: Text(currentTitle, key: Key(currentTitle)),
       ),
+      scrolledUnderElevation: 0.0,
       foregroundColor: Colors.white,
       backgroundColor: Colors.indigo.shade800,
     ),
     body: PageView(
       controller: pageController,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       children: pageWidgets,
     ),
     bottomNavigationBar: NavigationBar(

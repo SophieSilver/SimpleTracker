@@ -8,6 +8,7 @@ part '../generated/providers/stat_provider.g.dart';
 /// Get stored stat entries
 @riverpod
 Future<List<StatEntry>> statEntries(Ref ref) async {
+  // await Future.delayed(Duration(seconds: 2));
   final storage = await ref.watch(statStorageProvider.future);
   final stats = await storage.queryStats();
   return stats;
