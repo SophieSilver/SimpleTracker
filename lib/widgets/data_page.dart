@@ -13,6 +13,7 @@ Widget _dataPage(BuildContext context) {
     children: [
       Expanded(
         child: Container(
+          constraints: const BoxConstraints(maxWidth: 400.0),
           margin: const EdgeInsets.all(20.0),
           // decoration: BoxDecoration(
 
@@ -22,12 +23,17 @@ Widget _dataPage(BuildContext context) {
           // clipBehavior: Clip.antiAlias,
           child: Material(
             shape: RoundedRectangleBorder(
-              side: BorderSide(color: colorScheme.primary),
+              side: BorderSide(color: colorScheme.inversePrimary, width: 2.0),
               borderRadius: BorderRadius.circular(20.0),
             ),
             borderOnForeground: true,
             clipBehavior: Clip.antiAlias,
-            child: StatListView(),
+            child: const Column(
+              children: [
+                StatListHeader(),
+                Expanded(child: StatListView()),
+              ],
+            ),
           ),
         ),
       ),

@@ -16,7 +16,7 @@ Widget _statForm(BuildContext context) {
   return Form(
     autovalidateMode: AutovalidateMode.onUserInteraction,
     child: Container(
-      constraints: BoxConstraints(maxWidth: 350.0),
+      constraints: const BoxConstraints(maxWidth: 350.0),
       padding: const EdgeInsets.all(20.0),
       child: Column(
         spacing: 20.0,
@@ -59,7 +59,7 @@ Widget __formSubmitButton(
           _showSubmittedSnackbar(context);
         }
       },
-      child: Text("Submit"),
+      child: const Text("Submit"),
     ),
   );
 }

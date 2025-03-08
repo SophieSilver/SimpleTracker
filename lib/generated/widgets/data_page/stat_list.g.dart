@@ -34,3 +34,10 @@ class StatListView extends HookConsumerWidget {
         _ref,
       );
 }
+
+class StatListHeader extends HookWidget {
+  const StatListHeader({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _statListHeader(_context);
+}

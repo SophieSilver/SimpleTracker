@@ -16,13 +16,13 @@ Widget _statListItem(BuildContext context, StatEntry entry) {
   final colorScheme = Theme.of(context).colorScheme;
 
   final dateText = DateFormat("dd MMM y").format(entry.stat.dateTime);
-
   final numValue = entry.stat.numericValue;
   final isWhole = numValue.truncateToDouble() == numValue;
   final isLarge = numValue >= 1e21;
 
   final numText =
       isWhole && !isLarge ? numValue.toInt().toString() : numValue.toString();
+
   return Container(
     decoration: BoxDecoration(
       border: Border(
@@ -32,9 +32,8 @@ Widget _statListItem(BuildContext context, StatEntry entry) {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Flexible(
+        Expanded(
           flex: 3,
-          fit: FlexFit.tight,
           child: Container(
             padding:
                 const EdgeInsets.symmetric(vertical: 12.0).copyWith(left: 10.0),
@@ -45,20 +44,17 @@ Widget _statListItem(BuildContext context, StatEntry entry) {
             ),
           ),
         ),
-        Flexible(
+        Expanded(
           flex: 5,
-          fit: FlexFit.tight,
-          child: Container(
+          child: Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
-            alignment: Alignment.centerLeft,
             child:
                 Text(numText, overflow: TextOverflow.ellipsis, softWrap: false),
           ),
         ),
-        Flexible(
+        Expanded(
           flex: 1,
-          fit: FlexFit.tight,
           child: Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.only(right: 10.0),
@@ -84,4 +80,73 @@ Widget _statListView(BuildContext context, WidgetRef ref) {
       ),
     _ => throw Exception(),
   };
+}
+
+@hwidget
+Widget _statListHeader(BuildContext context) {
+  final theme = Theme.of(context);
+  final colorScheme = theme.colorScheme;
+
+  return Container(
+    decoration: BoxDecoration(
+      border: Border(
+        bottom: BorderSide(color: colorScheme.outlineVariant, width: 2.0),
+      ),
+      color: colorScheme.surfaceContainer,
+    ),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(
+          flex: 3,
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 12.0).copyWith(left: 10.0),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // make everything before and after the text take up an equal amount of space
+                // so that the text is centered
+                Flexible(
+                  flex: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Icon(Icons.calendar_month),
+                      SizedBox(width: 5.0)
+                    ],
+                  ),
+                ),
+                Text(
+                  "Date",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Spacer(flex: 1),
+              ],
+            ),
+          ),
+        ),
+        const Expanded(
+          flex: 3,
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: 12.0,
+              horizontal: 10.0,
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.numbers),
+                SizedBox(width: 5.0),
+                Text(
+                  "Value",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const Expanded(flex: 3, child: SizedBox()),
+      ],
+    ),
+  );
 }

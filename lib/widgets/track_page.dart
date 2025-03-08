@@ -8,7 +8,7 @@ part '../generated/widgets/track_page.g.dart';
 Widget _trackPage() {
   return Container(
     alignment: Alignment.topCenter,
-    padding: EdgeInsets.only(top: 40.0),
-    child: StatForm(),
+    padding: const EdgeInsets.only(top: 40.0),
+    child: const StatForm(),
   );
 }

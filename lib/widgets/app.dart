@@ -7,7 +7,7 @@ import '/widgets/home.dart';
 part '../generated/widgets/app.g.dart';
 
 @swidget
-Widget _app() {
+Widget _app(BuildContext context) {
   return MaterialApp(
     title: "Soracker",
     localizationsDelegates: [
@@ -21,6 +21,6 @@ Widget _app() {
       ),
       useMaterial3: true,
     ),
-    home: Home(),
+    home: const Home(),
   );
 }

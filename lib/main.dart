@@ -5,5 +5,5 @@ import 'logging.dart' as logging;
 
 void main() {
   logging.initLogger();
-  flutter.runApp(ProviderScope(child: App()));
+  flutter.runApp(const ProviderScope(child: App()));
 }

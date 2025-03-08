@@ -13,13 +13,12 @@ Widget _statDateInput(
 }) {
   final theme = Theme.of(context);
   final colorScheme = theme.colorScheme;
-  final textStyle =
-      DefaultTextStyle.of(context).style.copyWith(color: colorScheme.outline);
+  final textStyle = theme.textTheme.bodyLarge?.copyWith(color: colorScheme.outline);
 
   return Container(
     // It seems like the Input container is 48 pixels high, so we use that size
-    constraints: BoxConstraints.tightFor(height: 48.0),
-    padding: EdgeInsets.only(left: 15.0, right: 3.0),
+    constraints: const BoxConstraints.tightFor(height: 48.0),
+    padding: const EdgeInsets.only(left: 15.0, right: 3.0),
     decoration: BoxDecoration(
       border: Border.all(color: colorScheme.outline),
       borderRadius: BorderRadius.circular(4.0),
@@ -51,7 +50,7 @@ Widget _statDatePicker(
         firstDate: DateTime(now.year - 20),
         currentDate: record.value.dateTime,
         lastDate: DateTime(now.year + 20),
-        locale: Locale("en", "GB"), // use a normal date format
+        locale: const Locale("en", "GB"), // use a normal date format
       ).then((newDateTime) {
         if (newDateTime != null) {
           record.value = record.value.copyWith(dateTime: newDateTime);
@@ -62,7 +61,7 @@ Widget _statDatePicker(
       spacing: 8.0,
       children: [
         Text(DateFormat("d MMMM y").format(record.value.dateTime)),
-        Icon(Icons.calendar_month, size: 20.0),
+        const Icon(Icons.calendar_month, size: 20.0),
       ],
     ),
   );

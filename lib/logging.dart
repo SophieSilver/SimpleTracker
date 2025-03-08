@@ -11,7 +11,7 @@ class _LogPrinter extends LogPrinter {
   };
 
   static final levelColors = {
-    Level.trace: AnsiColor.fg(129),
+    Level.trace: const AnsiColor.fg(129),
     Level.debug: const AnsiColor.fg(27),
     Level.info: const AnsiColor.fg(46),
     Level.warning: const AnsiColor.fg(226),

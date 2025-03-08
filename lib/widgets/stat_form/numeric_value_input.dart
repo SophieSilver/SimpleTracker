@@ -22,7 +22,7 @@ Widget _numericValueInput(
     focusNode: focusNode,
     decoration: InputDecoration(
       // label: Text("Value"),
-      border: OutlineInputBorder(),
+      border: const OutlineInputBorder(),
       prefix: Text(
         "Value",
         style: textTheme.bodyLarge?.copyWith(color: colorScheme.outline),
@@ -32,9 +32,9 @@ Widget _numericValueInput(
       // this when the error text appears, it does not expand the widget
       helperText: " ",
 
-      contentPadding: EdgeInsets.symmetric(horizontal: 15.0),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 15.0),
     ),
-    keyboardType: TextInputType.numberWithOptions(signed: true, decimal: true),
+    keyboardType: const TextInputType.numberWithOptions(signed: true, decimal: true),
     textInputAction: isLast ? TextInputAction.done : TextInputAction.next,
     textAlign: TextAlign.end,
     inputFormatters: [
