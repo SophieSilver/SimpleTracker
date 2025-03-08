@@ -101,7 +101,7 @@ Widget _statListHeader(BuildContext context) {
           child: Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 12.0).copyWith(left: 10.0),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // make everything before and after the text take up an equal amount of space
@@ -111,32 +111,33 @@ Widget _statListHeader(BuildContext context) {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Icon(Icons.calendar_month),
-                      SizedBox(width: 5.0)
+                      Icon(Icons.calendar_month,
+                          color: theme.textTheme.bodyMedium?.color),
+                      const SizedBox(width: 5.0)
                     ],
                   ),
                 ),
-                Text(
+                const Text(
                   "Date",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                Spacer(flex: 1),
+                const Spacer(flex: 1),
               ],
             ),
           ),
         ),
-        const Expanded(
+        Expanded(
           flex: 3,
           child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               vertical: 12.0,
               horizontal: 10.0,
             ),
             child: Row(
               children: [
-                Icon(Icons.numbers),
-                SizedBox(width: 5.0),
-                Text(
+                Icon(Icons.numbers, color: theme.textTheme.bodyMedium?.color),
+                const SizedBox(width: 5.0),
+                const Text(
                   "Value",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
