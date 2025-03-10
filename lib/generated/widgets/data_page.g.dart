@@ -6,7 +6,7 @@ part of '../../widgets/data_page.dart';
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class DataPage extends HookWidget {
+class DataPage extends StatelessWidget {
   const DataPage({Key? key}) : super(key: key);
 
   @override

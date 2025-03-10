@@ -6,7 +6,7 @@ part of '../../providers/stat_storage_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$statStorageHash() => r'f15a1ff8858f041ecad6f7ed59bd2b55b9c6e235';
+String _$statStorageHash() => r'e2bf659b8a11459530992656a8ac73d4701e6ee6';
 
 /// A provider for StatStorage,
 ///

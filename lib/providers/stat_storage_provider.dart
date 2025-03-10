@@ -28,7 +28,7 @@ class StatStorage extends _$StatStorage {
   @override
   Future<StatStorageView> build() async {
     final db = await ref.read(databaseProvider.future);
-    log.d("rebuilding statStorageProvider");
+    log.d("building statStorageProvider");
     return StatStorageView._(db: db);
   }
 

@@ -1,5 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:so_simple_tracker/logging.dart';
+export 'utils/result.dart';
 
 extension RethrowError<T> on AsyncValue<T> {
   void rethrowError() {
