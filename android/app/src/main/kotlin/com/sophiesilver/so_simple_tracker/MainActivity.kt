@@ -1,4 +1,4 @@
-package com.example.so_simple_tracker
+package com.sophiesilver.simple_tracker
 
 import io.flutter.embedding.android.FlutterActivity
 

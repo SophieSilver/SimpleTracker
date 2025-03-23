@@ -9,7 +9,7 @@ part '../generated/widgets/app.g.dart';
 @swidget
 Widget _app(BuildContext context) {
   return MaterialApp(
-    title: "SoTracker",
+    title: "SimpleTracker",
     localizationsDelegates: [
       GlobalMaterialLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,

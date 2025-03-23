@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:so_simple_tracker/logging.dart';
-import 'package:so_simple_tracker/model/stat.dart';
-import 'package:so_simple_tracker/providers/stat_provider.dart';
-import 'package:so_simple_tracker/services/export_service.dart';
-import 'package:so_simple_tracker/utils.dart';
+import 'package:simple_tracker/logging.dart';
+import 'package:simple_tracker/model/stat.dart';
+import 'package:simple_tracker/providers/stat_provider.dart';
+import 'package:simple_tracker/services/export_service.dart';
+import 'package:simple_tracker/utils.dart';
 
 part '../../generated/widgets/data_page/export.g.dart';
 

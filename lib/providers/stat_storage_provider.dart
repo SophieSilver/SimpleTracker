@@ -1,8 +1,8 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:so_simple_tracker/logging.dart';
-import 'package:so_simple_tracker/model/stat.dart';
-import 'package:so_simple_tracker/providers/database_provider.dart';
-import 'package:so_simple_tracker/services/database_service.dart';
+import 'package:simple_tracker/logging.dart';
+import 'package:simple_tracker/model/stat.dart';
+import 'package:simple_tracker/providers/database_provider.dart';
+import 'package:simple_tracker/services/database_service.dart';
 
 part '../generated/providers/stat_storage_provider.g.dart';
 

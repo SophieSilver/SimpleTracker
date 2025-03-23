@@ -1,4 +1,4 @@
-import 'package:so_simple_tracker/model/stat.dart';
+import 'package:simple_tracker/model/stat.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 const currentVersion = 1;

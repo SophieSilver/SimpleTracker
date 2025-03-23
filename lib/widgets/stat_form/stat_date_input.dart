@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:intl/intl.dart';
-import 'package:so_simple_tracker/model/stat.dart';
+import 'package:simple_tracker/model/stat.dart';
 
 part '../../generated/widgets/stat_form/stat_date_input.g.dart';
 

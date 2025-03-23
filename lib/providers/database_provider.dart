@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:so_simple_tracker/logging.dart';
-import 'package:so_simple_tracker/services/database_service.dart';
+import 'package:simple_tracker/logging.dart';
+import 'package:simple_tracker/services/database_service.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:path/path.dart' as p;
 
