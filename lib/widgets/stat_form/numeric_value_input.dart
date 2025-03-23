@@ -42,7 +42,7 @@ Widget _numericValueInput(
       FilteringTextInputFormatter.allow(RegExp("[-+0-9\\.]")),
     ],
     onTapOutside: (_) {
-      log.d("Tapped outside the text input, unfocusing");
+      logger.d("Tapped outside the text input, unfocusing");
       focusNode.unfocus();
     },
     validator: (input) {

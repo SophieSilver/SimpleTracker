@@ -38,7 +38,7 @@ class _LogPrinter extends LogPrinter {
   }
 }
 
-final log = Logger(level: Level.debug, printer: _LogPrinter());
+final logger = Logger(level: Level.debug, printer: _LogPrinter());
 
 // doesn't do anything but might in the future
 void initLogger() {}

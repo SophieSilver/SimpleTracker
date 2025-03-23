@@ -15,7 +15,7 @@ class StatStorageView {
   StatStorageView._({required DatabaseService db}) : _db = db;
 
   Future<List<StatEntry>> queryStats() async {
-    log.d("Retrieving stats from storage...");
+    logger.d("Retrieving stats from storage...");
     return await _db.queryStats();
   }
 }
@@ -28,14 +28,14 @@ class StatStorage extends _$StatStorage {
   @override
   Future<StatStorageView> build() async {
     final db = await ref.read(databaseProvider.future);
-    log.d("building statStorageProvider");
+    logger.d("building statStorageProvider");
     return StatStorageView._(db: db);
   }
 
   Future<void> insertStat(StatRecord stat) async {
     final db = await ref.read(databaseProvider.future);
     await db.insertStat(stat);
-    log.d("Inserted $stat into storage");
+    logger.d("Inserted $stat into storage");
     // notifyListeners does not notify watchers,
     // so we just reassign to state to trigger a notification
     state = state;

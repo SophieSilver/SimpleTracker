@@ -5,7 +5,7 @@ export 'utils/result.dart';
 extension RethrowError<T> on AsyncValue<T> {
   void rethrowError() {
     if (this case AsyncError(:final error, :final stackTrace)) {
-      log.e("Unhandled error in AsyncValue: $error\n$stackTrace");
+      logger.e("Unhandled error in AsyncValue: $error\n$stackTrace");
       throw error;
     }
   }

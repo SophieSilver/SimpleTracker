@@ -21,10 +21,10 @@ Future<DatabaseService> database(Ref ref) async {
   final fullDbPath = p.join(dbDirectory.path, dbName);
 
   final db = await DatabaseService.init(dbPath: fullDbPath);
-  log.i("Opened database at $fullDbPath");
+  logger.i("Opened database at $fullDbPath");
 
   ref.onDispose(() {
-    log.i("Closed database at $fullDbPath");
+    logger.i("Closed database at $fullDbPath");
     db.close();
   });
 

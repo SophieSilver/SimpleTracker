@@ -13,14 +13,14 @@ part '../../generated/widgets/data_page/export.g.dart';
 Widget _exportButton(BuildContext context, WidgetRef ref) {
   return FilledButton(
     onPressed: () async {
-      log.d("Exporting stats");
+      logger.d("Exporting stats");
       final exportMethod = await showDialog<Export>(
         context: context,
         builder: (context) => const _ExportDialog(),
       );
 
       if (exportMethod == null && !context.mounted) {
-        log.d("No export methods chosen or context unmounted, aborting export");
+        logger.d("No export methods chosen or context unmounted, aborting export");
         return;
       }
       try {
@@ -30,9 +30,9 @@ Widget _exportButton(BuildContext context, WidgetRef ref) {
           exportMethod: exportMethod!,
         );
       } on Exception catch (error, stackTrace) {
-        log.e("Error while exporting stats: $error\n$stackTrace");
+        logger.e("Error while exporting stats: $error\n$stackTrace");
         if (!context.mounted) {
-          log.w("Context unmounted, rethrowing error");
+          logger.w("Context unmounted, rethrowing error");
           rethrow;
         }
 
@@ -92,17 +92,17 @@ Future<void> _exportStats({
 
   switch (entries) {
     case AsyncData(:final value):
-      log.d("Stats ready immediately, exporting...");
+      logger.d("Stats ready immediately, exporting...");
       await exportMethod.export(value.map((entry) => entry.stat));
 
     case AsyncLoading():
-      log.d("Stats not ready yet, waiting...");
+      logger.d("Stats not ready yet, waiting...");
       final result = await showDialog<Result<List<StatEntry>, Object>>(
         context: context,
         builder: (context) => _ExportLoading(exportMethod),
       );
       if (result == null) {
-        log.i("Stat exporting cancelled");
+        logger.i("Stat exporting cancelled");
         return;
       }
 
@@ -111,10 +111,10 @@ Future<void> _exportStats({
       break;
 
     case AsyncError(:final error, :final stackTrace):
-      log.e("Error while exporting stats: $error\n$stackTrace");
+      logger.e("Error while exporting stats: $error\n$stackTrace");
       throw error;
   }
-  log.i("Stats exported successfully");
+  logger.i("Stats exported successfully");
 }
 
 @cwidget
@@ -123,11 +123,11 @@ Widget __exportLoading(
   final entries = ref.watch(statEntriesProvider);
   switch (entries) {
     case AsyncData(:final value):
-      log.d("Stats loaded");
+      logger.d("Stats loaded");
       Navigator.of(context).pop(Ok<List<StatEntry>, Object>(value));
 
     case AsyncError(:final error, :final stackTrace):
-      log.w("Stats failed to load");
+      logger.w("Stats failed to load");
       Navigator.of(context).pop(
         Err<List<StatEntry>, Object>(error, stackTrace),
       );
