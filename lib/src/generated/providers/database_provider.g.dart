@@ -6,7 +6,7 @@ part of '../../providers/database_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$databaseHash() => r'2002390d7f0b9e5627158d9a0ec2c04149395ac9';
+String _$databaseHash() => r'493a261e0a9822cf5b4e664f1c0c467ccd77f6c2';
 
 /// Provides direct level access to the database service.
 ///

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 
-import '/widgets.dart';
+import '/src/widgets.dart';
 
-part '/generated/widgets/app.g.dart';
+part '../generated/widgets/app.g.dart';
 
 @swidget
 Widget _app(BuildContext context) {

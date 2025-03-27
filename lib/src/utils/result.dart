@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '/generated/utils/result.freezed.dart';
+part '../generated/utils/result.freezed.dart';
 
 @Freezed(
   map: FreezedMapOptions(map: false, mapOrNull: false, maybeMap: false),

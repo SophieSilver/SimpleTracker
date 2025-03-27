@@ -4,7 +4,7 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'data_page/stat_list.dart';
 import 'data_page/export.dart';
 
-part '/generated/widgets/data_page.g.dart';
+part '../generated/widgets/data_page.g.dart';
 
 @swidget
 Widget _dataPage(BuildContext context) {

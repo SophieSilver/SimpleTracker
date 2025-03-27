@@ -3,10 +3,10 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '/widgets.dart';
+import '/src/widgets.dart';
 
-part '/generated/widgets/home.freezed.dart';
-part '/generated/widgets/home.g.dart';
+part '../generated/widgets/home.freezed.dart';
+part '../generated/widgets/home.g.dart';
 
 @freezed
 class PageDescription with _$PageDescription {

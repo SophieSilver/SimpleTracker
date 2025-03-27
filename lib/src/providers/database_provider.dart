@@ -3,10 +3,10 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:path/path.dart' as p;
 
-import '/services.dart';
-import '/logging.dart';
+import '/src/services.dart';
+import '/src/logging.dart';
 
-part '/generated/providers/database_provider.g.dart';
+part '../generated/providers/database_provider.g.dart';
 
 const dbName = "soSimpleCounter.db";
 

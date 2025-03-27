@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '/generated/model/stat.freezed.dart';
+part '../generated/model/stat.freezed.dart';
 
 @freezed
 class StatEntry with _$StatEntry {

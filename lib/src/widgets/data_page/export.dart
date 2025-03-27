@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '/logging.dart';
-import '/model.dart';
-import '/providers.dart';
-import '/services.dart';
-import '/utils.dart';
+import '/src/logging.dart';
+import '/src/model.dart';
+import '/src/providers.dart';
+import '/src/services.dart';
+import '/src/utils.dart';
 
-part '/generated/widgets/data_page/export.g.dart';
+part '../../generated/widgets/data_page/export.g.dart';
 
 @cwidget
 Widget _exportButton(BuildContext context, WidgetRef ref) {

@@ -3,12 +3,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '/model.dart';
-import '/providers.dart';
+import '/src/model.dart';
+import '/src/providers.dart';
 import 'stat_form/numeric_value_input.dart';
 import 'stat_form/stat_date_input.dart';
 
-part '/generated/widgets/stat_form.g.dart';
+part '../generated/widgets/stat_form.g.dart';
 
 @hwidget
 Widget _statForm(BuildContext context) {

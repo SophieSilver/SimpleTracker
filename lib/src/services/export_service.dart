@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:csv/csv.dart';
 
-import '/model.dart';
+import '/src/model.dart';
 
 final List<Export> supportedExportMethods = Platform.isLinux
     ? [const SaveExport()]

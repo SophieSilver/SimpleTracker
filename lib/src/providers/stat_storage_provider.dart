@@ -1,11 +1,11 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '/logging.dart';
-import '/model.dart';
-import '/services.dart';
+import '/src/logging.dart';
+import '/src/model.dart';
+import '/src/services.dart';
 import 'database_provider.dart';
 
-part '/generated/providers/stat_storage_provider.g.dart';
+part '../generated/providers/stat_storage_provider.g.dart';
 
 /// A read-only view into stat storage that allows querying, but not modifying the stored data.
 ///

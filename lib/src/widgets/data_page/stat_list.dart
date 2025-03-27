@@ -3,11 +3,11 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
-import '/model.dart';
-import '/providers.dart';
-import '/utils.dart';
+import '/src/model.dart';
+import '/src/providers.dart';
+import '/src/utils.dart';
 
-part '/generated/widgets/data_page/stat_list.g.dart';
+part '../../generated/widgets/data_page/stat_list.g.dart';
 
 // TODO: deletion
 
