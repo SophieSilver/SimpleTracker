@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
-import 'package:simple_tracker/widgets/stat_form.dart';
+import '/widgets.dart';
 
 part '../generated/widgets/track_page.g.dart';
 

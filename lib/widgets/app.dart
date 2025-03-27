@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 
-import '/widgets/home.dart';
+import '/widgets.dart';
 
 part '../generated/widgets/app.g.dart';
 

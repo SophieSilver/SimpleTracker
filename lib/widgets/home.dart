@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:simple_tracker/widgets/data_page.dart';
-import 'package:simple_tracker/widgets/track_page.dart';
+
+import '/widgets.dart';
 
 part '../generated/widgets/home.freezed.dart';
 part '../generated/widgets/home.g.dart';

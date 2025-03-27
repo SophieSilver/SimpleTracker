@@ -1,8 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:simple_tracker/logging.dart';
-import 'package:simple_tracker/model/stat.dart';
-import 'package:simple_tracker/providers/database_provider.dart';
-import 'package:simple_tracker/services/database_service.dart';
+
+import '/logging.dart';
+import '/model.dart';
+import '/services.dart';
+import 'database_provider.dart';
 
 part '../generated/providers/stat_storage_provider.g.dart';
 
@@ -21,7 +22,7 @@ class StatStorageView {
 }
 
 /// A provider for StatStorage,
-/// 
+///
 /// Returns an object that can be used to query the stats
 @riverpod
 class StatStorage extends _$StatStorage {
