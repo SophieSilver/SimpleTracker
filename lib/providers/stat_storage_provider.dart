@@ -5,7 +5,7 @@ import '/model.dart';
 import '/services.dart';
 import 'database_provider.dart';
 
-part '../generated/providers/stat_storage_provider.g.dart';
+part '/generated/providers/stat_storage_provider.g.dart';
 
 /// A read-only view into stat storage that allows querying, but not modifying the stored data.
 ///

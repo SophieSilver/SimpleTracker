@@ -7,7 +7,7 @@ import '/model.dart';
 import '/providers.dart';
 import '/utils.dart';
 
-part '../../generated/widgets/data_page/stat_list.g.dart';
+part '/generated/widgets/data_page/stat_list.g.dart';
 
 // TODO: deletion
 

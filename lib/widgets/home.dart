@@ -5,8 +5,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '/widgets.dart';
 
-part '../generated/widgets/home.freezed.dart';
-part '../generated/widgets/home.g.dart';
+part '/generated/widgets/home.freezed.dart';
+part '/generated/widgets/home.g.dart';
 
 @freezed
 class PageDescription with _$PageDescription {

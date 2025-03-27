@@ -6,7 +6,7 @@ import 'package:path/path.dart' as p;
 import '/services.dart';
 import '/logging.dart';
 
-part '../generated/providers/database_provider.g.dart';
+part '/generated/providers/database_provider.g.dart';
 
 const dbName = "soSimpleCounter.db";
 

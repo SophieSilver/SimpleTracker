@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 
 import '/model.dart';
 
-part '../../generated/widgets/stat_form/stat_date_input.g.dart';
+part '/generated/widgets/stat_form/stat_date_input.g.dart';
 
 @swidget
 Widget _statDateInput(

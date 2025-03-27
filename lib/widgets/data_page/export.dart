@@ -8,7 +8,7 @@ import '/providers.dart';
 import '/services.dart';
 import '/utils.dart';
 
-part '../../generated/widgets/data_page/export.g.dart';
+part '/generated/widgets/data_page/export.g.dart';
 
 @cwidget
 Widget _exportButton(BuildContext context, WidgetRef ref) {

@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '/model.dart';
 import 'stat_storage_provider.dart';
 
-part '../generated/providers/stat_provider.g.dart';
+part '/generated/providers/stat_provider.g.dart';
 
 /// Get stored stat entries
 @riverpod

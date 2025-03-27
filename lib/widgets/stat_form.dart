@@ -8,7 +8,7 @@ import '/providers.dart';
 import 'stat_form/numeric_value_input.dart';
 import 'stat_form/stat_date_input.dart';
 
-part '../generated/widgets/stat_form.g.dart';
+part '/generated/widgets/stat_form.g.dart';
 
 @hwidget
 Widget _statForm(BuildContext context) {

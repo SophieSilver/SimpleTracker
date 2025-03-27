@@ -6,7 +6,7 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import '/logging.dart';
 import '/model.dart';
 
-part '../../generated/widgets/stat_form/numeric_value_input.g.dart';
+part '/generated/widgets/stat_form/numeric_value_input.g.dart';
 
 @hwidget
 Widget _numericValueInput(
